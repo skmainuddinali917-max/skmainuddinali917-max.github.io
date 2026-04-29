@@ -1,0 +1,293 @@
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #121212;
+    color: white;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 50px;
+    background-color: #1f1f1f;
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+}
+
+.navbar ul li {
+    margin-left: 20px;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.btn {
+    background-color: #ff4500;
+    padding: 10px 20px;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.video-grid {
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.iframe-container {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    height: 0;
+    overflow: hidden;
+}
+
+.iframe-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #1f1f1f;
+    margin-top: 50px;
+}
+/* বাটন হোভার ইফেক্ট */
+.btn:hover {
+    background-color: #ff6347; /* রঙ একটু পরিবর্তন হবে */
+    transform: scale(1.05); /* হালকা বড় হবে */
+    transition: 0.3s;
+}
+
+/* ভিডিও কার্ড হোভার ইফেক্ট */
+.video-card:hover {
+    border: 2px solid #ff4500;
+    transition: 0.3s;
+}
+.playlist-container {
+    max-width: 800px;
+    margin: 0 auto;
+    border-radius: 15px;
+    overflow: hidden;
+    border: 2px solid #333;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+    background: #1a1a1a;
+}
+.search-box {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.search-box input {
+    padding: 12px 20px;
+    width: 250px;
+    border-radius: 25px;
+    border: 1px solid #333;
+    background: #1a1a1a;
+    color: white;
+    outline: none;
+}
+
+.search-box button {
+    padding: 12px 25px;
+    border-radius: 25px;
+    border: none;
+    background: #ff4500;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.search-box button:hover {
+    background: #ff8c00;
+    transform: scale(1.05);
+}
+/* Button animation */
+.btn {
+    display: inline-block;
+    padding: 12px 30px;
+    background: linear-gradient(45deg, #ff4500, #ff8c00);
+    color: white;
+    font-weight: bold;
+    border-radius: 50px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    transform: scale(1.1);
+    background: #ff8c00;
+}
+/* ন্যাভবার স্টাইল */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #1a1a1a;
+}
+
+/* লোগোর কন্টেইনার */
+.nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* লোগো এবং নামের মাঝে ফাঁকা */
+}
+
+/* লোগোর সাইজ ছোট করার জন্য */
+.nav-logo img {
+    width: 45px;  /* লোগো ছোট করে দিলাম */
+    height: 45px;
+    border-radius: 50%;
+    border: 2px solid #ff4500;
+}
+
+/* নামের স্টাইল */
+.nav-logo span {
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+}
+.video-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.video-item {
+    background: #1a1a1a;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #333;
+}
+
+.video-item iframe {
+    width: 100%;
+    height: 200px;
+    border-radius: 5px;
+}
+body {
+    max-width: 1200px; /* পিসিতে ওয়েবসাইট খুব বেশি চওড়া হবে না, দেখতে সুন্দর লাগবে */
+    margin: 0 auto;    /* সব কন্টেন্ট মাঝখানে থাকবে */
+}
+.filter-btn {
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    border-radius: 20px;
+    background: #333;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.filter-btn:hover { background: #ff4500; }
+
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.video-card iframe {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border-radius: 15px;
+}
+/* ১. ভিডিও কার্ডের পজিশন ঠিক করা */
+.video-card {
+    position: relative; /* এটি ছাড়া ব্যাজগুলো বাইরে চলে যাবে */
+    border: 2px solid #ff4500; /* স্ক্রিনশটের মতো লাল বর্ডার চাইলে */
+    border-radius: 12px;
+    overflow: hidden; /* বর্ডারের বাইরে ভিডিও চলে যাওয়া আটকাবে */
+    margin-bottom: 20px;
+}
+
+/* ২. ব্যাজের পজিশন ঠিক করা */
+.meta-badges {
+    position: absolute; /* এটি কার্ডের ভেতরে বসবে */
+    bottom: 10px;       /* নিচ থেকে ১০ পিক্সেল উপরে */
+    right: 10px;        /* ডানদিক থেকে ১০ পিক্সেল ভেতরে */
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    z-index: 10;        /* ভিডিওর উপরে দেখাবে */
+}
+
+/* ৩. ব্যাজের ডিজাইন */
+.badge {
+    background: rgba(0, 0, 0, 0.8); /* গাঢ় কালো ব্যাকগ্রাউন্ড */
+    color: #fff;
+    padding: 3px 8px;
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: bold;
+}
+.video-card {
+    border: 2px solid #ff4500; /* বর্ডারের কালার */
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 25px;
+    background: #1a1a1a;
+    /* গ্লো ইফেক্ট */
+    box-shadow: 0 0 10px rgba(255, 69, 0, 0.4), 0 0 20px rgba(255, 69, 0, 0.2);
+    transition: all 0.4s ease;
+}
+
+/* মাউস হোভার করলে গ্লো বাড়বে */
+.video-card:hover {
+    box-shadow: 0 0 20px rgba(255, 69, 0, 0.6), 0 0 40px rgba(255, 69, 0, 0.3);
+    transform: translateY(-5px); /* হালকা উপরে উঠবে */
+}
+/* বাটন ডিজাইন */
+.filter-btn {
+    background: #222;
+    color: #ff4500;
+    border: 2px solid #ff4500;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    margin: 5px;
+    transition: 0.3s;
+    /* পালস অ্যানিমেশন কল করা */
+    animation: pulse-glow 2s infinite;
+}
+
+/* পালস অ্যানিমেশন কি-ফ্রেমস */
+@keyframes pulse-glow {
+    0% { box-shadow: 0 0 0 0 rgba(255, 69, 0, 0.7); }
+    70% { box-shadow: 0 0 0 10px rgba(255, 69, 0, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(255, 69, 0, 0); }
+}
+
+/* বাটনের ওপর মাউস নিলে অ্যানিমেশন থামবে এবং উজ্জ্বল হবে */
+.filter-btn:hover {
+    background: #ff4500;
+    color: #fff;
+    animation: none; /* হোভারে পালস বন্ধ হয়ে যাবে */
+}
+
+

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head> 
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M STAR Gaming</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="nav-logo">
+        <img src="logo.jpg" alt="Logo"> <span>M STAR Gaming</span>
+    </div>
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#videos">Videos</a></li>
+        </ul>
+</nav>
+
+<section id="home" style="padding: 60px 20px; text-align: center;">
+    <h1>Welcome to M STAR Gaming</h1>
+    <p>Best Mobile Gaming Walkthroughs & Tips</p>
+    <p>Your ultimate destination for mobile gaming walkthroughs, pro strategies, latest game updates, and hardware reviews. Join thousands of gamers, level up your skills, and dominate every game with us!</p>
+    <a href="#latest-video" class="btn">Watch Latest Video</a>
+</section>
+
+    </header>
+
+    <section class="search-section" style="padding: 20px; text-align: center;">
+    <section class="search-section" style="padding: 20px; text-align: center;">
+    <form onsubmit="event.preventDefault(); window.open('https://www.youtube.com/results?search_query=' + document.getElementById('search-input').value + ' M STAR Gaming', '_blank');">
+        <div class="search-box">
+            <input type="text" id="search-input" placeholder="Search my videos..." required>
+            <button type="submit">Search</button>
+        </div>
+    </form>
+</section>
+<button class="filter-btn" onclick="filterVideos('all')">All</button>
+<button class="filter-btn" onclick="filterVideos('latest')">Latest</button>
+<button class="filter-btn" onclick="filterVideos('popular')">Popular</button>
+<button class="filter-btn" onclick="filterVideos('walkthrough')">Walkthrough</button>
+
+
+<div class="video-grid" id="video-container">
+    
+    <div class="video-card latest">
+        <iframe src="https://www.youtube.com/embed/rJOi_YVSKIc" frameborder="0" allowfullscreen></iframe>
+        <div class="meta-badges">
+        <span class="badge">⏱️ 30 min</span>
+        <span class="badge">👁️ 20K Views</span>
+    </div>
+         <div style="padding: 10px; color: #fff; font-size: 14px; text-align: center;">Latest Gameplay</div>
+</div>
+
+   <div class="video-card popular">
+    <iframe src="https://www.youtube.com/embed/P-lD2LSjrDQ" frameborder="0" allowfullscreen></iframe>
+
+    <div class="meta-badges">
+        <span class="badge">⏱️ 12 min</span>
+        <span class="badge">👁 126K Views</span>
+    </div>
+
+    <div style="text-align: center; color: #fff; padding: 10px;">Popular Choice</div>
+</div>
+
+    <div class="video-card walkthrough">
+        <iframe src="https://www.youtube.com/embed/lcMytfFhH6w" frameborder="0" allowfullscreen></iframe>
+        
+        <div class="meta-badges">
+        <span class="badge">⏱️ 1:42:32</span>
+        <span class="badge">👁 60K Views</span>
+    </div>
+    
+        <div style="text-align: center; color: #fff;">Full Walkthrough</div>
+</div>
+
+
+
+        <div class="video-grid">
+            <div class="video-card">
+                <h3>Game Title 1</h3>
+                <div class="iframe-container">
+                    <iframe src="https://www.youtube.com/embed/5v_IxpIMr1g" allowfullscreen></iframe>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+    <section id="playlists" style="padding: 40px 20px; text-align: center;">
+    <h2 style="color: #fff; margin-bottom: 20px;">My Gaming Playlists</h2>
+    
+    <div class="playlist-container">
+        <iframe width="100%" height="400" src="https://www.youtube.com/embed/videoseries?list=PLlGRiloUuHIbi3WQrSKLy1cGvGbxI36Sd" frameborder="0" allowfullscreen></iframe>
+    </div>
+
+    <div style="margin-top: 25px;">
+        <a href="https://www.youtube.com/channel/UCZpgyxH_sdpeVuAQwtSr7MA/playlists" target="_blank" class="btn" style="text-decoration: none;">View All Playlists</a>
+    </div>
+</section>
+
+
+<section id="about" style="padding: 40px 20px; text-align: center;">
+    <h2>About M STAR Gaming</h2>
+    <p>I'm a passionate mobile gamer and content creator sharing gameplay walkthroughs, tips, and exciting gaming content to help you level up your skills.</p>
+    
+    <a href="https://www.youtube.com/channel/UCZpgyxH_sdpeVuAQwtSr7MA" target="_blank" class="btn" style="text-decoration: none;">Subscribe to YouTube</a>
+</section>
+
+<section id="social" style="padding: 30px; text-align: center;">
+    <h3>Follow Me on Facebook</h3>
+    <a href="https://www.facebook.com/share/1GfY7dNYGp/" target="_blank" style="text-decoration: none; color: #1877f2; font-size: 20px; font-weight: bold;">
+        Click Here to Visit M STAR Gaming Facebook Page
+    </a>
+</section>
+<section id="newsletter" style="padding: 50px 20px; background: #000; text-align: center; color: #fff;">
+    <h2 style="margin-bottom: 15px;">Subscribe to Newsletter</h2>
+    <p style="margin-bottom: 20px; color: #ccc;">Get updates on new videos and gaming tips directly in your inbox.</p>
+    
+    <form action="https://formspree.io/f/xbdqnwbg" method="POST" style="max-width: 400px; margin: 0 auto; display: flex; gap: 10px; flex-wrap: wrap;">
+        <input type="email" name="email" placeholder="Enter your email" required style="padding: 12px; flex: 1; border-radius: 5px; border: none; min-width: 200px;">
+        <button type="submit" style="background: #ff4500; color: white; padding: 12px 25px; border: none; border-radius: 5px; cursor: pointer; font-weight: bold;">Subscribe</button>
+    </form>
+</section>
+<section id="contact" style="padding: 50px 20px; background: #1a1a1a; text-align: center; color: #fff;">
+    <h2 style="margin-bottom: 20px;">Contact Us</h2>
+    <p style="margin-bottom: 30px; color: #ccc;">Have questions or collaboration requests? Send me a message!</p>
+    
+    <form action="https://formspree.io/f/xbdqnwbg" method="POST" style="max-width: 500px; margin: 0 auto; display: flex; flex-direction: column; gap: 10px;">
+        <input type="text" name="name" placeholder="Your Name" required style="padding: 12px; border-radius: 5px; border: none;">
+        
+        <input type="email" name="email" placeholder="Your Email" required style="padding: 12px; border-radius: 5px; border: none;">
+        
+        <textarea name="message" placeholder="Your Message" required style="padding: 12px; height: 120px; border-radius: 5px; border: none;"></textarea>
+        
+        <button type="submit" style="background: #ff4500; color: white; padding: 12px; border: none; border-radius: 5px; cursor: pointer; font-weight: bold;">Send Message</button>
+    </form>
+</section>
+
+    <footer>
+        <p>&copy; 2026 M STAR Gaming. All rights reserved.</p>
+    </footer>
+<script>
+function filterVideos(category) {
+    // সব ভিডিও কার্ড সিলেক্ট করুন
+    const cards = document.querySelectorAll('.video-card');
+
+    cards.forEach(card => {
+        // যদি 'all' সিলেক্ট করা হয়, সব দেখাবে
+        if (category === 'all') {
+            card.style.display = 'block';
+        } 
+        // যদি নির্দিষ্ট ক্যাটাগরি সিলেক্ট করা হয়
+        else if (card.classList.contains(category)) {
+            card.style.display = 'block';
+        } 
+        // বাকিগুলো লুকিয়ে ফেলবে
+        else {
+            card.style.display = 'none';
+        }
+    });
+}
+</script>
+
+
+</body>
+</html>
