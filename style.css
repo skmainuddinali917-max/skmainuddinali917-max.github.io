@@ -289,5 +289,34 @@ body {
     color: #fff;
     animation: none; /* হোভারে পালস বন্ধ হয়ে যাবে */
 }
+.category-menu {
+    display: flex;
+    overflow-x: auto; /* মোবাইলে স্ক্রল করার জন্য */
+    gap: 10px;
+    padding: 15px 5px;
+    margin-bottom: 20px;
+    scrollbar-width: none; /* স্ক্রলবার হাইড করার জন্য */
+}
 
+/* হাইড স্ক্রলবার ফর ক্রোম/সাফারি */
+.category-menu::-webkit-scrollbar {
+    display: none;
+}
+
+.cat-btn {
+    background-color: #222; /* কালো থিম */
+    color: #fff;
+    border: 1px solid #ff8c00; /* আপনার থিম কালার */
+    padding: 8px 18px;
+    border-radius: 20px; /* গোল বাটন */
+    white-space: nowrap;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 14px;
+}
+
+.cat-btn:hover, .cat-btn:focus {
+    background-color: #ff8c00; /* হোভারে কমলা */
+    color: #000;
+}
 
