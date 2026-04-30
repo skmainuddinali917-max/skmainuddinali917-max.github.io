@@ -97,6 +97,35 @@
 <button class="filter-btn" onclick="filterVideos('popular')">Popular</button>
 <button class="filter-btn" onclick="filterVideos('walkthrough')">Walkthrough</button>
 
+<div style="text-align: center; margin: 30px auto; padding: 20px; background: rgba(0, 0, 0, 0.6); border: 1px solid #ff8c00; border-radius: 15px; max-width: 500px; box-shadow: 0 0 10px rgba(255, 140, 0, 0.3);">
+    <h3 style="color: #ff8c00; margin-bottom: 5px; font-family: sans-serif;">🎮 Confused what to play?</h3>
+    <p style="color: #ccc; margin-bottom: 15px; font-size: 14px; font-family: sans-serif;">Let us pick a game for you!</p>
+    
+    <button id="randomBtn" style="padding: 12px 25px; background: #ff8c00; color: #000; border: none; border-radius: 8px; font-weight: bold; cursor: pointer; font-size: 16px; transition: 0.3s;">
+        🎲 Random Game
+    </button>
+    <div id="randomGameDisplay" style="margin-top: 20px; min-height: 250px;">
+        </div>
+</div>
+
+<script>
+    // এখানে আপনার ভিডিও আইডিগুলো কমা দিয়ে দিয়ে লিখুন
+    const gameVideos = ["9sgCBOwTzSU"]; 
+
+    document.getElementById('randomBtn').addEventListener('click', function() {
+        const display = document.getElementById('randomGameDisplay');
+        const randomIndex = Math.floor(Math.random() * gameVideos.length);
+        const selectedId = gameVideos[randomIndex];
+        
+        display.innerHTML = `
+            <iframe width="100%" height="250" 
+            src="https://www.youtube.com/embed/${selectedId}?autoplay=1&rel=0" 
+            frameborder="0" allow="autoplay; encrypted-media" allowfullscreen 
+            style="border-radius: 10px; border: 2px solid #ff8c00;">
+            </iframe>
+        `;
+    });
+</script>
 
 <div class="video-grid" id="video-container">
     
