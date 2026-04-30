@@ -30,7 +30,57 @@
     <a href="#latest-video" class="btn">Watch Latest Video</a>
 </section>
 
-    </header>
+  <style>
+  .stats-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin: 30px auto;
+    max-width: 500px;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.5);
+    border: 1px solid #ff8c00;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(255, 140, 0, 0.2);
+    text-align: center;
+  }
+  .stat-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .stat-label {
+    font-size: 10px;
+    color: #ccc;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 5px;
+  }
+  .stat-value {
+    font-size: 18px;
+    font-weight: bold;
+    color: #ff8c00;
+  }
+  .stat-icon {
+    font-size: 20px;
+  }
+</style>
+
+<div class="stats-container">
+  <div class="stat-item">
+    <span class="stat-icon">👁️</span>
+    <span class="stat-value">350K+</span> <span class="stat-label">Total Views</span>
+  </div>
+  <div class="stat-item">
+    <span class="stat-icon">👥</span>
+    <span class="stat-value">2.5K+</span> <span class="stat-label">Subscribers</span>
+  </div>
+  <div class="stat-item">
+    <span class="stat-icon">🎬</span>
+    <span class="stat-value">50</span> <span class="stat-label">Videos</span>
+  </div>
+</div>
+  </header>
 
     <section class="search-section" style="padding: 20px; text-align: center;">
     <section class="search-section" style="padding: 20px; text-align: center;">
