@@ -122,11 +122,12 @@
     <iframe width="100%" height="200" src="https://www.youtube.com/embed/yIFieLKSxAw" frameborder="0" allowfullscreen></iframe>
     <h3>Underwater Survival Deep Dive</h3> 
     </div>    
-    <div>    
-<button class="filter-btn" onclick="filterVideos('latest')">Latest</button>
-<button class="filter-btn" onclick="filterVideos('popular')">Popular</button>
-<button class="filter-btn" onclick="filterVideos('walkthrough')">Walkthrough</button>
-    </div>
+    <div class="filter-menu" style="margin-top: 10px;">
+    <button class="filter-btn" onclick="filterContent('type', 'latest')">Latest</button>
+    <button class="filter-btn" onclick="filterContent('type', 'popular')">Popular</button>
+    <button class="filter-btn" onclick="filterContent('type', 'walkthrough')">Walkthrough</button>
+</div>
+
 <div style="text-align: center; margin: 30px auto; padding: 20px; background: rgba(0, 0, 0, 0.6); border: 1px solid #ff8c00; border-radius: 15px; max-width: 500px; box-shadow: 0 0 10px rgba(255, 140, 0, 0.3);">
     <h3 style="color: #ff8c00; margin-bottom: 5px; font-family: sans-serif;">🎮 Confused what to play?</h3>
     <p style="color: #ccc; margin-bottom: 15px; font-size: 14px; font-family: sans-serif;">Let us pick a game for you!</p>
