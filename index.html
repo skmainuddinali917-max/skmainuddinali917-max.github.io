@@ -123,6 +123,7 @@
     <iframe width="100%" height="200" src="https://www.youtube.com/embed/yIFieLKSxAw" frameborder="0" allowfullscreen></iframe>
     <h3>Underwater Survival Deep Dive</h3> 
     </div>    
+        
     <div class="filter-menu" style="margin-top: 10px;">
     <button class="filter-btn" onclick="filterContent('type', 'latest')">Latest</button>
     <button class="filter-btn" onclick="filterContent('type', 'popular')">Popular</button>
@@ -312,6 +313,29 @@ function filterVideos(category) {
             });
         }
     </script>
+    <script>
+    let activeCategory = 'all';
+    let activeType = 'all';
+
+    function filterContent(key, value) {
+        if (key === 'category') activeCategory = value;
+        if (key === 'type') activeType = value;
+
+        const cards = document.querySelectorAll('.video-card');
+        cards.forEach(card => {
+            const cat = card.getAttribute('data-category');
+            const typ = card.getAttribute('data-type');
+
+            if ((activeCategory === 'all' || cat === activeCategory) && 
+                (activeType === 'all' || typ === activeType)) {
+                card.style.display = 'block';
+            } else {
+                card.style.display = 'none';
+            }
+        });
+    }
+</script>
+
 </body>
 </html>
 
