@@ -100,7 +100,9 @@
     <button class="cat-btn" onclick="filterGames('racing')">Racing</button>
     <button class="cat-btn" onclick="filterGames('survival')">Survival</button>
     </div>   
-        
+        <button class="filter-btn" onclick="filterVideos('latest')">Latest</button>
+<button class="filter-btn" onclick="filterVideos('popular')">Popular</button>
+<button class="filter-btn" onclick="filterVideos('walkthrough')">Walkthrough</button>
         <div class="video-card action">
     <iframe width="100%" height="200" src="https://www.youtube.com/embed/bHZbwXZTlTQ" frameborder="0" allowfullscreen></iframe>
     <h3>Black Strike Gameplay (iOS, Android) - Offline Story FPS</h3> 
@@ -123,13 +125,7 @@
     <iframe width="100%" height="200" src="https://www.youtube.com/embed/yIFieLKSxAw" frameborder="0" allowfullscreen></iframe>
     <h3>Underwater Survival Deep Dive</h3> 
     </div>    
-        
-    <div class="filter-menu" style="margin-top: 10px;">
-    <button class="filter-btn" onclick="filterContent('type', 'latest')">Latest</button>
-    <button class="filter-btn" onclick="filterContent('type', 'popular')">Popular</button>
-    <button class="filter-btn" onclick="filterContent('type', 'walkthrough')">Walkthrough</button>
-    </div>
-        
+           
 <div style="text-align: center; margin: 30px auto; padding: 20px; background: rgba(0, 0, 0, 0.6); border: 1px solid #ff8c00; border-radius: 15px; max-width: 500px; box-shadow: 0 0 10px rgba(255, 140, 0, 0.3);">
     <h3 style="color: #ff8c00; margin-bottom: 5px; font-family: sans-serif;">🎮 Confused what to play?</h3>
     <p style="color: #ccc; margin-bottom: 15px; font-size: 14px; font-family: sans-serif;">Let us pick a game for you!</p>
@@ -314,26 +310,26 @@ function filterVideos(category) {
         }
     </script>
     <script>
-    let activeCategory = 'all';
-    let activeType = 'all';
+    <script>
+function filterVideos(category) {
+    // সব ভিডিও কার্ড সিলেক্ট করুন
+    const cards = document.querySelectorAll('.video-card');
 
-    function filterContent(key, value) {
-        if (key === 'category') activeCategory = value;
-        if (key === 'type') activeType = value;
-
-        const cards = document.querySelectorAll('.video-card');
-        cards.forEach(card => {
-            const cat = card.getAttribute('data-category');
-            const typ = card.getAttribute('data-type');
-
-            if ((activeCategory === 'all' || cat === activeCategory) && 
-                (activeType === 'all' || typ === activeType)) {
-                card.style.display = 'block';
-            } else {
-                card.style.display = 'none';
-            }
-        });
-    }
+    cards.forEach(card => {
+        // যদি 'all' সিলেক্ট করা হয়, সব দেখাবে
+        if (category === 'all') {
+            card.style.display = 'block';
+        } 
+        // যদি নির্দিষ্ট ক্যাটাগরি সিলেক্ট করা হয়
+        else if (card.classList.contains(category)) {
+            card.style.display = 'block';
+        } 
+        // বাকিগুলো লুকিয়ে ফেলবে
+        else {
+            card.style.display = 'none';
+        }
+    });
+}
 </script>
 
 </body>
